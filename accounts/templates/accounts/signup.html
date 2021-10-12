@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% load crispy_forms_tags %}
+       <div class="container">
+        <h4 class="container"> Register yourself </h4>
+       </br>
+            <form class="site-form container shadow p-3 mb-5 bg-body rounded" action="{% url 'accounts:signup' %}" method="post">
+            {% csrf_token %}
+            
+            {{ form|crispy }}
+            <input type="submit" value="signup" class="btn btn-primary col-3">
+            </form>
+       </div>
+{% endblock content %}
