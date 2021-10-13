@@ -33,6 +33,11 @@ def login_view(request):
     return render(request,'accounts/login.html',{'form':form})
 
 def logout_view(request):
-    if request.method == 'POST':
-        logout(request)
-        return redirect('landing_page')
+
+    # Form POST banako bela ra yo jhan secure method ho #
+    # if request.method == 'POST': #
+    #     logout(request) #
+    #     return redirect('landing_page') #
+
+    logout(request)
+    return redirect('landing_page')

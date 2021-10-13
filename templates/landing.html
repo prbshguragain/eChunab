@@ -8,7 +8,12 @@
                 <h2>Casting Vote</h2>
                 <h3>Ever been easier</h3>
                 <p>With online voting system you're every vote is safe and unhackable with blockchain technology</p>
-                <a href="accounts/login">VOTE NOW</a>
+                
+                {% if user.is_authenticated %}
+                    <a href="{% url 'dashboard:dash' %}" >VOTE NOW</a>
+                {% else %}
+                    <a href="{% url 'accounts:login' %}">VOTE NOW</a>
+                {% endif %}
             </div>
             <div class="col-12 col-lg-8">
                 <img class="banner" src="{% static 'mainbenner.png' %}" alt="Team process banner">

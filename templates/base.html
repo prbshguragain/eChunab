@@ -29,25 +29,30 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Info</a>
                         </li>
+
+                        {% if user.is_authenticated %}
                         <li class="nav-item">
+                            <a class="nav-link text-primary" href="{% url 'accounts:logout' %}">Logout</a>
+                        </li>
+                        {% else %}
+                            <li class="nav-item">
                             <a class="nav-link text-primary" href="{% url 'accounts:login' %}">Login/Signup</a>
                         </li>
+                        {% endif %}
+
                     </ul>
                 </div>
             </nav>
         </header>
     </div>
 
-        {% block content %}
+{% block content %}
 
 
 
-        {% endblock content %}    
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js">
-    </script>   
-    </body>
+{% endblock content %}    
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>   
+</body>
 </html>

@@ -11,3 +11,11 @@ class UserForm(UserCreationForm):
     class Meta:
         model = User
         fields = ('username','first_name','last_name','email','password1','password2')
+        help_texts = {
+            "username":None,
+        }
+# overiding UserCreationForm to hide default help text  #
+    def __init__(self, *args, **kwargs):
+            super().__init__(*args, **kwargs)
+            self.fields['password1'].help_text=''
+            self.fields['password2'].help_text=''
