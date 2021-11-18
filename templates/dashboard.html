@@ -1,6 +1,32 @@
-{% extends 'base.html' %}
-{% block content %}
-    
-    
+{% extends 'base_entry.html' %}
+{% load static %}
 
-{% endblock content %}
+{% block dash %}    
+
+<div class="content">
+  <h2>Read the Guidelines</h2>
+  <p>Please read these Guidelines beofre proceeding it'll be easy for you to use our webapp</p>
+  <ol>
+    <li>Ability to assure that only eligible voters are allowed/able to vote
+- use of specific password & login security)
+-current roster of eligible voters
+-reasonable and announced period (eg. 2 weeks) for voting that is fairly consistent
+across all voting if not specified in procedures; send reminder before voting period closes </li>
+    <li>Anonymity v. confidentiality – if #1 is met, the vote can’t be anonymous. However, it can be
+kept confidential by limiting the access to the identity of voters to a trusted source(s). For
+example, for Senate elections we use Catalyst and only the Secretary of the Faculty & her
+assistant have access to the uwnetids of voters and have confidentiality as part of their job
+description..you could ask the ‘tellers’ to sign a confidentiality agreement if this is a concern. </li>
+    <li>Actual voting setup issues (Catalyst allows this): a voter can change his own vote before it is
+cast/”sent”; once “sent”, neither the voter nor anyone else can change the vote; a person can’t
+vote more than once </li>
+    <li>Documentation, Verification & Auditable – method to assure that a cast vote is really counted,
+and can be recounted, if necessary; who voted, and who didn’t, as a public record; the voter can
+discover if his vote has been changed (or miscounted) and fix it without destroying the secrecy
+of the ballot</li>
+    <li>Final vote is verified and certified by 2 people (eg. our votes are certified by the Secretary of
+the Faculty & the Senate Chair) & reported in writing to the voters/official in charge
+ </li>
+  </ol>
+</div>
+{% endblock dash %}

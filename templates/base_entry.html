@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{% static 'dashboard.css' %}">
+</head>
+<body>
+
+<div class="sidebar">
+  <a class="active" href="{% url 'dashboard:dash' %}">Info</a>
+  <a href="{% url 'dashboard:vote' %}">Vote Now</a>
+  <a href="#contact">Results</a>
+  <a href="#about">Contact</a>
+</div>
+
+{% block dash %}
+
+
+
+{% endblock dash %}
+
+</body>
+</html>
+
+
+{% endblock content %}

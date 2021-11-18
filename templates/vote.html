@@ -1,0 +1,42 @@
+{% extends 'base_entry.html' %}
+{% load static %}
+
+{% block dash %}
+
+<style>
+  
+  .card-sep {
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.19);
+  }
+
+  .img-sep {
+    padding-top: 10px;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.19);
+  }
+
+</style>
+
+<center><h3 class="vote-title"><u> Vote your favourite person </u></h3></center> 
+
+{% for c in candidates %}
+<center>
+<div class="card card-sep" style="width: 15rem;">
+
+  <div class="text-center">
+    <img src="https://www.w3schools.com/tags/img_girl.jpg" class="img-fluid img-sep" alt="...">
+  </div>
+  <div class="card-body">
+    <h5 class="card-titl"> {{ c.name }} </h5>
+    <small><i> {{ c.team }} </i></small>
+    <p class="card-text"> {{ c.slogan }} </p>
+    <a href="#" class="btn btn-primary">Vote</a>
+  </div>
+</div>
+</br>
+</center>
+{% endfor %}
+
+{% endblock dash %}
